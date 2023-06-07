@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --dark-blue: hsl(220, 13%, 13%);
+    --dark-grayish: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish: hsl(223, 64%, 98%);
+}
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+.list li{
+    padding-top: 20px;
+    padding-bottom: 23px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.list li:hover{
+    color: black;
+    border-bottom: 3px solid orange;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.list.active{
+    display: block;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 50px 20px;
+    height: 100%;
+    width: 50%;
+    z-index: 2;
+}
+.list.active::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    color: black;
+    font-weight: bold;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+}
+.list.active li{
+    padding: 10px 0;
+}
+.close{
+    z-index: 3;
+    margin: 20px;
+}
+.cart{
+    position: relative;
+    cursor: pointer;
+}
+.cart p{
+    position: absolute;
+    bottom: 16px;
+    left: 10px;
+    background-color: hsl(26, 100%, 55%);
+    width: 20px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: x-small;
+}
+#cartCard{
+    right: 30px;
+    position: absolute;
+    top: 50px;
+    z-index: 3;
+}
+.smallImage .active{
+    position: relative;
+}
+.smallImage img{
+    border-radius: 10px;
+    width: calc(25% - 10px);
+}
+.smallImage img:hover , .smallImage .active{
+    border: 2px solid hsl(26, 100%, 55%);
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
